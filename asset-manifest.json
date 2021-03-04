@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/chord-cheat-sheet/static/css/main.ae4e244c.chunk.css",
+    "main.js": "/chord-cheat-sheet/static/js/main.fdcc0e0e.chunk.js",
+    "main.js.map": "/chord-cheat-sheet/static/js/main.fdcc0e0e.chunk.js.map",
+    "runtime-main.js": "/chord-cheat-sheet/static/js/runtime-main.86ed28ab.js",
+    "runtime-main.js.map": "/chord-cheat-sheet/static/js/runtime-main.86ed28ab.js.map",
+    "static/js/2.c1ee2fda.chunk.js": "/chord-cheat-sheet/static/js/2.c1ee2fda.chunk.js",
+    "static/js/2.c1ee2fda.chunk.js.map": "/chord-cheat-sheet/static/js/2.c1ee2fda.chunk.js.map",
+    "static/js/3.8d993136.chunk.js": "/chord-cheat-sheet/static/js/3.8d993136.chunk.js",
+    "static/js/3.8d993136.chunk.js.map": "/chord-cheat-sheet/static/js/3.8d993136.chunk.js.map",
+    "index.html": "/chord-cheat-sheet/index.html",
+    "static/css/main.ae4e244c.chunk.css.map": "/chord-cheat-sheet/static/css/main.ae4e244c.chunk.css.map",
+    "static/js/2.c1ee2fda.chunk.js.LICENSE.txt": "/chord-cheat-sheet/static/js/2.c1ee2fda.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.86ed28ab.js",
+    "static/js/2.c1ee2fda.chunk.js",
+    "static/css/main.ae4e244c.chunk.css",
+    "static/js/main.fdcc0e0e.chunk.js"
+  ]
+}
