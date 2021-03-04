@@ -24,7 +24,7 @@
   padding: 0 20px;
 }
 
-.main h1 {
+.title {
   display: flex;
   align-items: center;
 }
@@ -34,7 +34,6 @@
 }
 
 select {
-  width: 40px;
   height: 30px;
   margin: 0 8px;
 }
@@ -69,4 +68,38 @@ select {
 
 .card p {
   margin: 0 0 16px 0;
+}
+
+.mobileOnly {
+  display: none;
+}
+
+@media (orientation: portrait) {
+  .main {
+    margin-top: 130px;
+  }
+  .sidebar {
+    display: none;
+  }
+  .title {
+    display: none;
+  }
+  .mobileOnly {
+    display: block;
+    padding: 10px 20px;
+    background-color: #282c34;
+    color: #fff;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .chords-section {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .card {
+    width: calc(100% / 7);
+  }
 }

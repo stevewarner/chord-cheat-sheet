@@ -43,7 +43,7 @@ const ChordView = () => {
         Modes={Object.keys(Modes)}
       />
       <div className="main">
-        <h1>
+        <h1 className="title">
           in
           <Select
             value={noteValue}
@@ -52,6 +52,20 @@ const ChordView = () => {
           />
           {modeValue} you can play...
         </h1>
+
+        <div className="mobileOnly">
+          <h1>chord cheat sheet</h1>
+          <Select
+            value={noteValue}
+            onChange={setNoteValue}
+            dropdownOptions={noteOptions}
+          />
+          <Select
+            value={modeValue}
+            onChange={setModeValue}
+            dropdownOptions={Object.keys(Modes)}
+          />
+        </div>
 
         {Object.keys(Modes[modeValue].patterns).map((pattern) => (
           <div key={pattern}>
