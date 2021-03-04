@@ -1,0 +1,8 @@
+{
+    "notes": ["C", "C#", "D", "Eb", "E", "F", "F#", "G", "G#", "A", "Bb", "B"],
+    "patterns": {
+        "triad": ["", "min", "min", "", "", "min", "dim"],
+        "seventh": ["maj7", "min7", "min7", "maj7", "7", "min7", "m7b5"],
+        "extended": ["sus4", "m6 or m9", "none", "#11", "sus4", "min9", "none"]
+  }
+}

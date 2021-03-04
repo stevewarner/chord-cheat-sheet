@@ -1,0 +1,72 @@
+{
+    "ionian": {
+      "key": 0,
+      "intervals": [0, 2, 4, 5, 7, 9, 11],
+      "degrees": ["I", "ii", "iii", "IV", "V", "vi", "vii°"],
+      "patterns" : {
+        "triad": ["", "min", "min", "", "", "min", "dim"],
+        "seventh": ["maj7", "min7", "min7", "maj7", "7", "min7", "m7b5"],
+        "extended": ["sus4", "m6 or m9", "none", "#11", "sus4", "min9", "none"]
+      }
+    },
+    "dorian": {
+      "key": 1,
+      "intervals": [0, 2, 3, 5, 7, 9, 10],
+      "degrees": ["i", "ii", "bIII", "IV", "v", "vi°", "bVII"],
+      "patterns" : {
+        "triad": ["min", "min", "", "", "min", "dim", ""],
+        "seventh": ["min7", "min7", "maj7", "7", "min7", "m7b5", "maj7"],
+        "extended": ["m6 or m9", "none", "#11", "sus4", "min9", "none", "sus4"]
+      }
+    },
+    "phrygian": {
+      "key": 2,
+      "intervals": [0, 2, 3, 5, 7, 8, 10],
+      "degrees": ["i", "bII", "bIII", "iv", "v°", "bVI", "bvii"],
+      "patterns" : {
+        "triad": ["min", "", "", "min", "dim", "", "min"],
+        "seventh": ["min7", "maj7", "7", "min7", "m7b5", "maj7", "min7"],
+        "extended": ["none", "#11", "sus4", "min9", "none", "sus4", "m6 or m9"]
+      }
+    },
+    "lydian": {
+      "key": 3,
+      "intervals": [0, 2, 4, 6, 7, 9, 11],
+      "degrees": ["I", "II", "iii", "iv°", "V", "vi", "vii"],
+      "patterns" : {
+        "triad": ["", "", "min", "dim", "", "min", "min"],
+        "seventh": ["maj7", "7", "min7", "m7b5", "maj7", "min7", "min7"],
+        "extended": ["#11", "sus4", "min9", "none", "sus4", "m6 or m9", "none"]
+      }
+    },
+    "mixolydian": {
+      "key": 4,
+      "intervals": [0, 2, 4, 5, 7, 9, 10],
+      "degrees": ["I", "ii", "iii°", "IV", "v", "bVI", "bvii"],
+      "patterns" : {
+        "triad": ["", "min", "dim", "", "min", "min", ""],
+        "seventh": ["7", "min7", "m7b5", "maj7", "min7", "min7", "maj7"],
+        "extended": ["sus4", "min9", "none", "sus4", "m6 or m9", "none", "#11"]
+      }
+    },
+    "aeolian": {
+      "key": 5,
+      "intervals": [0, 2, 3, 5, 7, 8, 11],
+      "degrees": ["i", "ii°", "bIII", "iv", "v", "bVI", "bVII"],
+      "patterns" : {
+        "triad": ["min", "dim", "", "min", "min", "", ""],
+        "seventh": ["min7", "m7b5", "maj7", "min7", "min7", "maj7", "7"],
+        "extended": ["min9", "none", "sus4", "m6 or m9", "none", "#11", "sus4"]
+      }
+    },
+    "locrian": {
+      "key": 6,
+      "intervals": [0, 2, 3, 5, 7, 9, 10],
+      "degrees": ["i°", "bII", "biii", "iv", "bv", "bVI", "bvii"],
+      "patterns" : {
+        "triad": ["dim", "", "min", "min", "", "", "min"],
+        "seventh": ["m7b5", "maj7", "min7", "min7", "maj7", "7", "min7"],
+        "extended": ["none", "sus4", "m6 or m9", "none", "#11", "sus4", "min9"]
+      }
+    }
+  }
