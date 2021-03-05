@@ -1,5 +1,19 @@
-import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
+import styled, { css } from 'styled-components';
+
+const SidebarContainer = styled.div`
+  color: #fff;
+  background-color: #282c34;
+  width: 20vw;
+  padding: 0 20px;
+  .modes {
+    display: flex;
+    flex-direction: column;
+  }
+  @media (orientation: portrait) {
+    display: none;
+  }
+`;
 
 const Title = styled.h1`
   padding: 10px 20px;
@@ -37,7 +51,7 @@ const Button = styled.button`
 const Sidebar = (props) => {
   const { currentMode, selectMode, Modes } = props;
   return (
-    <div className="sidebar">
+    <SidebarContainer>
       <Title>
         chord
         <br />
@@ -57,7 +71,7 @@ const Sidebar = (props) => {
           </Button>
         ))}
       </div>
-    </div>
+    </SidebarContainer>
   );
 };
 

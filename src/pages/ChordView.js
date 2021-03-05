@@ -1,11 +1,32 @@
 /* eslint-disable no-plusplus */
 import { useState } from 'react';
+import styled from 'styled-components';
 import Sidebar from '../components/Sidebar';
-import Select from '../components/Select';
-import Modes from '../modes-data.json';
-import ChordOptions from '../chord-options.json';
+import ModesData from '../modes-data.json';
+import Header from '../components/Title';
+import ChordRows from '../components/ChordRows';
 
-const { notes } = ChordOptions;
+const FlexContainer = styled.div`
+  display: flex;
+`;
+
+const Main = styled.div`
+  color: #282c34;
+  background-color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 20px;
+  h2 {
+    text-transform: capitalize;
+  }
+  @media (orientation: portrait) {
+    margin-top: 130px;
+  }
+`;
+
+const { notes, modes } = ModesData;
 
 const ChordView = () => {
   const [noteValue, setNoteValue] = useState('C');
@@ -15,8 +36,6 @@ const ChordView = () => {
   const secondaryDominants = [...notes];
   const shuffledNotes = [...notes];
 
-  //   const shuffledPatterns = { ...patterns };
-
   for (let i = 0; i < notes.indexOf(noteValue); i++) {
     shuffledNotes.push(shuffledNotes.shift());
   }
@@ -25,84 +44,29 @@ const ChordView = () => {
     secondaryDominants.push(secondaryDominants.shift());
   }
 
-  // const selectedMode = 'ionian';
-
-  // eslint-disable-next-line no-plusplus
-  //   for (let i = 0; i < Modes[modeValue].key; i++) {
-  //     shuffledPatterns.triad.push(shuffledPatterns.triad.shift());
-  //     shuffledPatterns.seventh.push(shuffledPatterns.seventh.shift());
-  //     shuffledPatterns.extended.push(shuffledPatterns.extended.shift());
-  //   }
-  //   console.log(Modes[modeValue].key);
-  //   console.log(shuffledPatterns);
   return (
-    <div className="App">
+    <FlexContainer>
       <Sidebar
         currentMode={modeValue}
         selectMode={setModeValue}
-        Modes={Object.keys(Modes)}
+        Modes={Object.keys(modes)}
       />
-      <div className="main">
-        <h1 className="title">
-          in
-          <Select
-            value={noteValue}
-            onChange={setNoteValue}
-            dropdownOptions={noteOptions}
-          />
-          {modeValue} you can play...
-        </h1>
-
-        <div className="mobileOnly">
-          <h1>chord cheat sheet</h1>
-          <Select
-            value={noteValue}
-            onChange={setNoteValue}
-            dropdownOptions={noteOptions}
-          />
-          <Select
-            value={modeValue}
-            onChange={setModeValue}
-            dropdownOptions={Object.keys(Modes)}
-          />
-        </div>
-
-        {Object.keys(Modes[modeValue].patterns).map((pattern) => (
-          <div key={pattern}>
-            <h2>{`${pattern} Chords`}</h2>
-            <div className="chords-section">
-              {Modes[modeValue].patterns[pattern].map((chord, index) => (
-                <div
-                  key={index}
-                  className={`card ${chord === 'none' ? 'hidden' : ''}`}
-                >
-                  <p>{Modes[modeValue].degrees[index]}</p>
-                  <p>{`${
-                    shuffledNotes[Modes[modeValue].intervals[index]]
-                  }${chord}`}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        ))}
-        <h2>Secondary Dominant Chords</h2>
-        <div className="chords-section">
-          {Modes[modeValue].degrees.map((degree, index) => (
-            <div
-              key={index}
-              className={`card ${degree === 'none' ? 'hidden' : ''}`}
-            >
-              <p>
-                {index === 0 ? 'V7' : `V/${Modes[modeValue].degrees[index]}`}
-              </p>
-              <p>{`${
-                secondaryDominants[Modes[modeValue].intervals[index]]
-              }7`}</p>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+      <Main>
+        <Header
+          noteValue={noteValue}
+          setNoteValue={setNoteValue}
+          noteOptions={noteOptions}
+          modeValue={modeValue}
+          setModeValue={setModeValue}
+          modeOptions={Object.keys(modes)}
+        />
+        <ChordRows
+          mode={modes[modeValue]}
+          notes={shuffledNotes}
+          secondaryDominants={secondaryDominants}
+        />
+      </Main>
+    </FlexContainer>
   );
 };
 

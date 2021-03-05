@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Chord Cheat Sheet",
+  "name": "A tool to help with Diatonic Harmony",
   "icons": [
     {
       "src": "favicon.ico",
