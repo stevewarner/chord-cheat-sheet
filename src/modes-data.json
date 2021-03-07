@@ -24,7 +24,7 @@
     },
     "phrygian": {
       "key": 2,
-      "intervals": [0, 2, 3, 5, 7, 8, 10],
+      "intervals": [0, 1, 3, 5, 7, 8, 10],
       "degrees": ["i", "bII", "bIII", "iv", "v°", "bVI", "bvii"],
       "patterns" : {
         "triad": ["min", "", "", "min", "dim", "", "min"],
@@ -54,7 +54,7 @@
     },
     "aeolian": {
       "key": 5,
-      "intervals": [0, 2, 3, 5, 7, 8, 11],
+      "intervals": [0, 2, 3, 5, 7, 8, 10],
       "degrees": ["i", "ii°", "bIII", "iv", "v", "bVI", "bVII"],
       "patterns" : {
         "triad": ["min", "dim", "", "min", "min", "", ""],
