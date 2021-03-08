@@ -35,7 +35,7 @@
     "lydian": {
       "key": 3,
       "intervals": [0, 2, 4, 6, 7, 9, 11],
-      "degrees": ["I", "II", "iii", "iv°", "V", "vi", "vii"],
+      "degrees": ["I", "II", "iii", "#iv°", "V", "vi", "vii"],
       "patterns" : {
         "triad": ["", "", "min", "dim", "", "min", "min"],
         "seventh": ["maj7", "7", "min7", "m7b5", "maj7", "min7", "min7"],
@@ -45,7 +45,7 @@
     "mixolydian": {
       "key": 4,
       "intervals": [0, 2, 4, 5, 7, 9, 10],
-      "degrees": ["I", "ii", "iii°", "IV", "v", "bvi", "bVII"],
+      "degrees": ["I", "ii", "iii°", "IV", "v", "vi", "bVII"],
       "patterns" : {
         "triad": ["", "min", "dim", "", "min", "min", ""],
         "seventh": ["7", "min7", "m7b5", "maj7", "min7", "min7", "maj7"],
