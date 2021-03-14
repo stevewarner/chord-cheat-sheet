@@ -30,7 +30,7 @@ const Button = styled.button`
   padding: 8px;
   margin-left: 16px;
   text-align: start;
-  font-size: 16px;
+  font-size: 18px;
   transition: ease background-color 250ms;
   cursor: pointer;
   &:hover {
